@@ -1,5 +1,5 @@
 import math
-n = float(input('Qual numero deseja calcular? '))
+n = float(input('Qual ângulo deseja calcular? '))
 sen = math.sin(n)
 cos = math.cos(n)
 tan = math.atan(n)
