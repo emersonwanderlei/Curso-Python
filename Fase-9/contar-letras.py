@@ -1,3 +1,3 @@
 nome = (input('Favor, digite seu nome: '))
-e = nome.count([2])
-print('Tem {} caracteris')
+m = len.nome()
+print('Tem {} caracteris'.format(nome))
