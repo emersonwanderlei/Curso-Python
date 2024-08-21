@@ -7,3 +7,5 @@ print('Seu nome em minisculo fica {}'.format(mi))
 print('Ao todo o nome {} tem {} letras'.format(nome, separar))
 primeiroNome = nome.find(' ')
 print('Seu primeiro nome tem {} letras'.format(primeiroNome))
+
+#REFAZER QUANDOR VISUALIZAR NOVAMENTE
