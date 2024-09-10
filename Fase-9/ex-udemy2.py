@@ -10,6 +10,8 @@ if n1 % 2 == 0:
 else:
     print('Este é um numero impar')
 
+print('-'*20)
+
 """
 Faça um programa que pergunte a hora ao usuário e, baseando-se no horário 
 descrito, exiba a saudação apropriada. Ex. 
@@ -24,6 +26,7 @@ elif entrada >= 12 and entrada <= 17:
 else:
     print('Boa noite!')
 
+print('-'*20)
 """
 Faça um programa que peça o primeiro nome do usuário. Se o nome tiver 4 letras ou 
 menos escreva "Seu nome é curto"; se tiver entre 5 e 6 letras, escreva 
