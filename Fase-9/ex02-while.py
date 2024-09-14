@@ -8,7 +8,7 @@ while True:
     print('2 - Subtração')
     print('3 - Multiplicação')
     print('4 - Divisão')
-    escolha = int(input(('Qual operação deseja realizar: ')))
+    operador = (input(('Qual operação deseja realizar: ')))
 
     soma = n1 + n2
     subtracao = n1 - n2
@@ -27,13 +27,13 @@ while True:
         print(' Um ou ambos os valores são invalidos, digite um numero válido')
         continue
 
-    if escolha == 1:
+    if operador == 1:
         print(f'{n1_float} + {n2_float} é = {soma}')
-    elif escolha == 2:
+    elif operador == 2:
         print(f'{n1_float} + {n2_float} é = {subtracao}')
-    elif escolha == 3:
+    elif operador == 3:
         print(f'{n1_float} + {n2_float} é = {subtracao}')
-    elif escolha == 4:
+    elif operador == 4:
         print(f'{n1_float} + {n2_float} é = {subtracao}')
     else:
         print('Não entendi. Qual operação deseja realizar: ')
