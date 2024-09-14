@@ -1,6 +1,7 @@
 #CALCULADOR COM WHILE
 
 while True:
+    print('CALCULADOR USANDO O WHILE')
     n1 = input('Digite um número: ')
     n2 = input('Digite outro número: ')
 
@@ -27,7 +28,7 @@ while True:
         print(' Um ou ambos os valores são invalidos, digite um numero válido')
         continue
 
-    if operador == '1' or "soma" or 'Soma' or 'SOMA':
+    if operador == '1':
         print(f'{n1_float} + {n2_float} é = ', n1_float + n2_float)
     elif operador == '2':
         print(f'{n1_float} - {n2_float} é = ', n1_float - n2_float)
@@ -40,13 +41,11 @@ while True:
         continue
 
     sair = str(input('Quer sair [s]im [n]ão: '))
-    if sair == 'sim' or 's':
+    if sair == 'sim' or sair == 's':
         print('Você saiu...')
         break
-    elif sair == 'não' or 'n':
-        continue
     else:
-        print('Você quer sair: [s]im ou [n]ão')
+        continue
 
 
 
