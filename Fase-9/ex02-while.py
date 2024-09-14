@@ -1,14 +1,14 @@
 #CALCULADOR COM WHILE
 
 while True:
-    n1 = (input('Digite um número: '))
-    n2 = (input('Digite outro número: '))
+    n1 = input('Digite um número: ')
+    n2 = input('Digite outro número: ')
 
     print('1 - Soma')
     print('2 - Subtração')
     print('3 - Multiplicação')
     print('4 - Divisão')
-    operador = (input(('Qual operação deseja realizar: ')))
+    operador = input(('Qual operação deseja realizar: '))
 
     soma = n1 + n2
     subtracao = n1 - n2
@@ -16,6 +16,7 @@ while True:
     divisao = n1 / n2
     numeros_validos = None
     sair = 'sim' or 's'
+
     try:
         n1_float = float(n1)
         n2_float = float(n2)
