@@ -8,14 +8,13 @@ while True:
     print('2 - Subtração')
     print('3 - Multiplicação')
     print('4 - Divisão')
+    print('-' * 20)
+    print('Digite o número de 1 a 4, referente a operação')
     operador = input(('Qual operação deseja realizar: '))
-
-    soma = n1 + n2
-    subtracao = n1 - n2
-    multplicacao = n1 * n2
-    divisao = n1 / n2
+    
     numeros_validos = None
-    sair = 'sim' or 's'
+    n1_float = 0
+    n2_float = 0
 
     try:
         n1_float = float(n1)
@@ -28,20 +27,26 @@ while True:
         print(' Um ou ambos os valores são invalidos, digite um numero válido')
         continue
 
-    if operador == 1:
-        print(f'{n1_float} + {n2_float} é = {soma}')
-    elif operador == 2:
-        print(f'{n1_float} + {n2_float} é = {subtracao}')
-    elif operador == 3:
-        print(f'{n1_float} + {n2_float} é = {subtracao}')
-    elif operador == 4:
-        print(f'{n1_float} + {n2_float} é = {subtracao}')
+    if operador == '1' or "soma" or 'Soma' or 'SOMA':
+        print(f'{n1_float} + {n2_float} é = ', n1_float + n2_float)
+    elif operador == '2':
+        print(f'{n1_float} - {n2_float} é = ', n1_float - n2_float)
+    elif operador == '3':
+        print(f'{n1_float} * {n2_float} é = ', n1_float * n2_float)
+    elif operador == '4':
+        print(f'{n1_float} / {n2_float} é = ', n1_float / n2_float)
     else:
         print('Não entendi. Qual operação deseja realizar: ')
+        continue
 
-    print('Quer sair [s]im [n]ão')
-    if sair is True:
+    sair = str(input('Quer sair [s]im [n]ão: '))
+    if sair == 'sim' or 's':
+        print('Você saiu...')
         break
+    elif sair == 'não' or 'n':
+        continue
+    else:
+        print('Você quer sair: [s]im ou [n]ão')
 
 
 
