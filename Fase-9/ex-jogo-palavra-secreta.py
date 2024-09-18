@@ -1,10 +1,8 @@
-palavra_secreta = 'Emerson'
+palavra_secreta = 'Exercito'
 palavra_digitada = ''
+indice = 0
 while True:
 
     try:
         ...
     except:
-        ...
-    if palavra_secreta == palavra_digitada:
-        print()
