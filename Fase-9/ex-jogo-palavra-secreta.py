@@ -16,11 +16,11 @@ usuário.
 """
 palavra_secreta = 'perfume'
 letra_acertada = ''
-tentativa = 0
+nr_tentativas = 0
 
 while True:
     letra_digitada = input('Digite uma letra: ')
-    tentativa += 1
+    nr_tentativas += 1
 
     if len(letra_digitada) > 1:
         print('Apenas um letra. digite outra vez')
@@ -41,6 +41,6 @@ while True:
     if palavra_formada == palavra_secreta:
         print('VOCÊ GANHOU!!. PARABÉNS!')
         print(f'Sua palavra secreta é {palavra_secreta}')
-        print(f'Tentativas {tentativa}')
+        print(f'Tentativas {nr_tentativas}')
         letra_acertada = ''
-        tentativa = 0
+        nr_tentativas = 0
