@@ -39,48 +39,8 @@ while True:
     print(palavra_formada)
 
     if palavra_formada == palavra_secreta:
-        print('VOCÊ GANHOU!!')
+        print('VOCÊ GANHOU!!. PARABÉNS!')
         print(f'Sua palavra secreta é {palavra_secreta}')
         print(f'Tentativas {tentativa}')
-
-        
-
-
-
-
-
-
-
-
-'''
-palavra_secreta = 'exercito'
-letra_acertada = ''
-tentativas = 0
-
-while True:
-    letra_digitada = input('Digite uma letra: ').lower()
-    tentativas += 1
-
-    if len(letra_digitada) > 1:
-        print('Digite apenas uma letra.')
-        continue
-    
-    if letra_digitada in palavra_secreta:
-        letra_acertada += letra_digitada
-
-    palavra_formada = ''
-    for letra_secreta in palavra_secreta:
-        if letra_secreta in letra_acertada:
-            palavra_formada += letra_secreta
-        else:
-            palavra_formada += '*'
-    
-    print(f'Palavra formada:{palavra_formada}')
-
-    if palavra_formada == palavra_secreta:
-        print('VOCÊ GANHOU!! PARABÉNS')
-        print(f'A palavra era {palavra_secreta}')
-        print(f'Tentativas: {tentativas}')
         letra_acertada = ''
-        tentativas = 0
-'''
+        tentativa = 0
