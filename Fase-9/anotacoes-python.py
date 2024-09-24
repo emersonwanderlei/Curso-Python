@@ -23,8 +23,8 @@ Métodos úteis:
 Create Read Update   Delete
 Criar, ler, alterar, apagar = lista[i] (CRUD)
 '''
-lista = ('Emerson', 'Leticia', 'Eloá')
-i = range(len(lista))
+"""
+Tipo tupla - Uma lista imutável
 
-for indice in i:
-    print(indice, lista[indice])
+nomes = ('Maria', 'Helena', 'Luiz')
+"""
