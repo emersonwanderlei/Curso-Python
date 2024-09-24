@@ -1,5 +1,5 @@
 '''
-For + Range
+****For + Range****
 range -> range(start, stop, step)
 ------------------------------------
 Iterável -> str, range, etc (___iter___)
@@ -9,7 +9,7 @@ iter -> me entregue seu interador
 '''
 '''
 Listas em Python
-Tipo list - Mutável
+****Tipo list - Mutável****
 Suporta vários valores de qualquer tipo
 Conhecimentos reutilizáveis - índices e fatiamento
 Métodos úteis:
@@ -24,7 +24,7 @@ Create Read Update   Delete
 Criar, ler, alterar, apagar = lista[i] (CRUD)
 '''
 """
-Tipo tupla - Uma lista imutável
+****Tipo tupla - Uma lista imutável****
 
 nomes = ('Maria', 'Helena', 'Luiz')
 """
