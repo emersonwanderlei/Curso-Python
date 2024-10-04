@@ -23,9 +23,27 @@ Existe o escopo global e local.
 O escopo global é o escopo onde todo o código é alcançavel.
 O escopo local é o escopo onde apenas nomes do mesmo local
 podem ser alcançados.
+
+args - Argumentos não nomeados
+* - *args (empacotamento e desempacotamento)
+"""
+# Lembre-te de desempacotamento
+# x, y, *resto = 1, 2, 3, 4
+# print(x, y, resto)
+
 '''
 
-def soma (x, y):
-    print(x + y)
+# def soma (x, y):
+#     print(x + y)
 
-soma(2, 8)
+# soma(2, 8)
+
+def soma (*args):
+    total = 0
+    for numero in args:
+        print('Total', total, numero)
+        total += numero
+        print('Total', total)
+    print(total)
+
+soma(1, 2, 3, 4, 5, 6)
