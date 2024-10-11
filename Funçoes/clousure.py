@@ -1,5 +1,12 @@
 
-def criar_saudacao(saudacao, nome):
-    return f'{saudacao}, {nome}'
+def criar_saudacao(saudacao):
+    def saudar(nome):
+        return f'{saudacao}, {nome}'
+    return saudar
 
-print(criar_saudacao('Boa tarde', 'Emerson'))
+falar_bom_dia = criar_saudacao('Bom dia')
+falar_boa_noite = criar_saudacao('Boa noite')
+
+for nome in ['Emerson', 'Leticia', 'Zoe']:
+    print(falar_bom_dia(nome))
+    print(falar_boa_noite(nome))
