@@ -27,5 +27,20 @@
 pessoa = {
     'nome': 'Emerson',
     'sobrenome': 'Wanderlei',
-    'idade': 0,
+    #'idade': 0,
 }
+chave = 'idade'
+pessoa[chave] = 26
+
+chave = 'endereço'
+pessoa[chave] = 'Candido Reis, Coelho, São Gonçalo'
+
+pessoa['endereço'] = 'Estrada do COELHO'
+print(pessoa)
+
+pessoa.update({
+    'bairro': input('digite Coelho:')
+})
+
+for listagem in pessoa:
+    print(listagem, pessoa[listagem])
