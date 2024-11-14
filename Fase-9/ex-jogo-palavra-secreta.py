@@ -26,6 +26,7 @@ while True:
         print('Apenas um letra. digite outra vez')
         continue
 
+#alterei
     if letra_digitada in palavra_secreta:
         letra_acertada += letra_digitada
 
