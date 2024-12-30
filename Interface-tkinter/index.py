@@ -40,8 +40,24 @@ PassEntry = ttk.Entry(RightFrame, width=30, show='*')
 PassEntry.place(x=110, y=153)
 
 # Botões
+def Login():
+    user = UserEntry.get()
+    password = PassEntry.get()
 
-LoginButton = ttk.Button(RightFrame, text='Login', width=30)
+    DataBaser.cursor.execute('''
+    SELECT * FROM Users
+    WHERE User = ? AND Password = ?
+    ''', (user, password))
+    print('Selecionou')
+    
+    VerifyLogin = DataBaser.cursor.fetchone()
+    try:
+        if user in VerifyLogin and password in VerifyLogin:
+            messagebox.showinfo(title='Login Info', message='Acesso Confirmado. Bem Vindo!')
+    except TypeError:
+        messagebox.showinfo(title='Login Infor', message='Acesso Negado. Verifique se está cadastrado no sistema!')
+
+LoginButton = ttk.Button(RightFrame, text='Login', width=30, command=Login)
 LoginButton.place(x=110, y=200)
 
 def Register():
@@ -66,11 +82,15 @@ def Register():
         email = EmailEntry.get()
         user = UserEntry.get()
         password = PassEntry.get()
-        DataBaser.cursor.execute('''
-        INSERT INTO Users(Name, Email, User, Password) VALUES(?, ?, ?, ?)
-        ''', (name, email, user, password))
-        DataBaser.conn.commit()
-        messagebox.showinfo(title='Register Info', message='Conta Criada com Sucesso!')
+
+        if name == '' and email == '' and user == '' and password == '' or name == '' and email == '':
+            messagebox.showerror(title='Register Error', message='Não Deixe Nenhum Campo Vazio. Preencha Todos os Campos.')
+        else:
+            DataBaser.cursor.execute('''
+            INSERT INTO Users(Name, Email, User, Password) VALUES(?, ?, ?, ?)
+            ''', (name, email, user, password))
+            DataBaser.conn.commit()
+            messagebox.showinfo(title='Register Info', message='Conta Criada com Sucesso!')
 
 
     Register = ttk.Button(RightFrame, text='Register', width=30, command=RegisterToDataBase)
